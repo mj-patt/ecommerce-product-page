@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+  <div class="pagewrapper">
+    <nav>
+      <div class="navwrapper">
+        <ul class="menu1">
+          <li class="hideMenuButton"><button type="button" class="btn btn-icon" onclick="showSidebar()"><img src="images/icon-menu.svg"></button></li>
+          <li class="menuleft" id="logo"><img src="images/logo.svg"></li>
+          <li class="menuleft" id="hideItem"><a href="#">Collections</a></li>
+          <li class="menuleft" id="hideItem"><a href="#">Men</a></li> 
+          <li class="menuleft" id="hideItem"><a href="#">Women</a></li>
+          <li class="menuleft" id="hideItem"><a href="#">About</a></li>
+          <li class="menuleft" id="hideItem"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="menu2">
+          
+          <button type="button" class="btn btn-icon" data-toggle="modal" data-target=".bd-example-modal-sm"><img src="images/icon-cart.svg"><span class=" badge badge-pill cart-count" id="cart-count"></span></button>
+          <!-- <span class=" badge badge-pill cart-count" id="cart-count"></span> -->
+            <!-- <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"> -->
+              <div class="modal fade bd-example-modal-sm" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" >
+              <div class="modal-dialog">
+                 <div class="modal-content">
+                  <div class="cartText">
+                    <p >Cart</p>
+                  </div>
+                  <hr>
+                  <div id="cart-items">
+                    <p class="cartEmpty">Your cart is empty.</p>
+                  </div>
+               
+                 </div>
+              </div>
+            </div>  
+          <!-- </li> -->
+
+          <li class="menuright" id="avatar"><img id="photo" src="images/image-avatar.png"></li>              
+        </ul>
+
+        
+          <section class="container-popup" id="sidebar-bg">
+            <ul id="sidebar">
+              <li><button type="button" class="btn btn-icon" id="close-sidebar" onclick="hideSidebar()"><img src="images/icon-close.svg"></button></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li> 
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </section>
+        
+       
+      </div>
+
+      
+    </nav>
+
+  
+
+
+    <br>
+
+    <div class="mainContainer">
+
+      <div class="conLeft">
+
+        <div class="bigPic">
+          <img class="mainPic" id="bigpic" src="images/image-product-1.jpg" onclick="openModal()"/>
+          <a class="mainPrev" onclick="changeMainPic(-1)">
+            <img src="images/icon-previous.svg" />
+          </a>
+          <a class="mainNext" onclick="changeMainPic(1)">
+            <img src="images/icon-next.svg" />
+          </a>
+        </div>
+
+        <div class="smallPics">
+          
+          <label id="img1">
+            
+            <input type="radio" name="myRadio" value="1" onclick="showpic1();currentSlide(1)">
+            <div>
+            <img src="images/image-product-1-thumbnail.jpg" alt="Option 1">
+            </div>
+            
+          </label>
+          
+          <label id="img2">
+            <input type="radio" name="myRadio" value="2" onclick="showpic2();currentSlide(2)">
+            <div>
+            <img src="images/image-product-2-thumbnail.jpg" alt="Option 2">
+            </div>
+          </label>
+
+          <label id="img3">
+            <input type="radio" name="myRadio" value="3" onclick="showpic3();currentSlide(3)">
+            <div>
+            <img src="images/image-product-3-thumbnail.jpg" alt="Option 3">
+            </div>
+          </label>
+          
+          <label id="img4">
+            <input type="radio" name="myRadio" value="4" onclick="showpic4();currentSlide(4)">
+            <div>
+            <img src="images/image-product-4-thumbnail.jpg" alt="Option 4">
+            </div>
+          </label>
+          
+        </div>
+
+      
+      </div>
+
+      <div class="conRight">
+          <div class="con1">
+            <h1>SNEAKER COMPANY</h1>
+          </div>
+
+          <div class="con2">
+            <h2>Fall Limited Edition Sneakers</h2>
+          </div>
+
+          <div class="con3">
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+          </div>
+
+          <div class="price-line">
+            <div class="con4">
+              <div class="price">
+                <h3>$125.00</h3>
+              </div>
+
+              <div class="discount">
+                <p>50%</p>
+              </div>
+            </div>
+
+            <div class="con5">
+              <h4>$250.00</h4>
+            </div>
+            
+          </div>
+
+          <div class="con6">
+            <div class="qty">
+              
+              <button class="changeqtyleft" onclick="minus()">-</button>
+              <input min="1" value="0" type="number" id="itemqty" class="qtybox">
+              <button class="changeqtyright" onclick="plus()">+</button>
+            </div>
+            <div class="add">
+              <button type="button" class="addcart" onclick="addToCart('Fall Limited Edition Sneakers', 125.00)"> <img class="carticon" src="images/icon-cart.svg"><span>Add to cart</span></button> 
+            </div>
+          </div>
+      
+      </div>
+
+      <!-- lightbox -->
+      <div id="myModal2" class="modal2">
+        
+        <!-- <span class="close cursor" onclick="closeModal()">&times;</span> -->
+        <div class="modal-content2">
+          <span class="close cursor" onclick="closeModal()">
+            <img src="images/icon-close.svg"/>
+          </span>
+      
+          <div class="mySlides">
+            <img src="images/image-product-1.jpg">
+          </div>
+      
+          <div class="mySlides">
+            <img src="images/image-product-2.jpg">
+          </div>
+      
+          <div class="mySlides">
+            <img src="images/image-product-3.jpg">
+          </div>
+      
+          <div class="mySlides">
+            <img src="images/image-product-4.jpg">
+          </div>
+          
+          <div class="overlaypics">
+          <!-- <div class="column"> -->
+            
+            <img class="demo" src="images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)">
+          <!-- </div> -->
+            
+          <!-- <div class="column"> -->
+            
+            <img class="demo" src="images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)">
+  
+          <!-- </div> -->
+      
+          <!-- <div class="column"> -->
+            <img class="demo" src="images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)">
+          <!-- </div> -->
+      
+          <!-- <div class="column"> -->
+            <img class="demo" src="images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)">
+          <!-- </div> -->
+          </div>
+
+        <a class="prev" onclick="plusSlides(-1)">
+          <img src="images/icon-previous.svg" />
+        </a>
+        <a class="next" onclick="plusSlides(1)">
+          <img src="images/icon-next.svg" />
+        </a>
+
+        </div>
+
+        <!-- Next/previous controls -->
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+      
+      </div>
+
+
+    </div>
+   
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  </div>
+</body>
+
+<script src="jsfile.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</html>

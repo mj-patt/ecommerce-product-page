@@ -1,0 +1,960 @@
+
+p{
+    text-decoration: none;
+}
+
+body{
+    font-family: "Kumbh Sans";
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.pagewrapper{ 
+    display: flex;
+    flex-direction: column;
+    padding-top: 0%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.navwrapper{
+  display:flex; 
+  position: relative;
+  height:130px;   
+}
+
+.menu1, .menu2{
+  padding-bottom: 25px;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  padding-left: 0px; 
+  width:100%;
+  padding-right: 0px; 
+  padding-top: 10px;
+  position:relative;
+}
+
+nav div ul li{
+  display: block;    
+} 
+
+.menuleft a{
+  color: hsl(219, 9%, 45%);
+  text-decoration: none;    
+  font-family: "Kumbh Sans";
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 51px;
+}
+
+#photo{
+  width: 40px;
+}
+
+#cart{
+  width:40px;
+}
+
+.menu1{
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.menu2{
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;  
+}
+
+.conLeft{
+  display: flex;
+  flex-direction: column;
+  width:43%;
+  align-items: center;
+}
+
+.conRight{
+  display: flex;
+  flex-direction: column;
+  width:50%;
+  padding-left: 10%;
+}
+
+.bigPic{
+  width:100%;
+}
+
+.mainPic{
+  width:100%;
+}
+
+.con1{
+  padding-bottom: 4%;
+}
+
+h1{
+    font-size: 14px;
+    color: orange;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.con2{
+  padding-bottom: 7%;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.con3{
+    letter-spacing: 1px;
+    color: hsl(219, 9%, 45%);
+    line-height: 1.5;
+    font-size: 14px;
+    padding-bottom: 4%;
+}
+
+.discount p{
+  font-size: 16px;
+  font-weight: 700;
+  color: orange;
+  background-color: hsl(25, 100%, 94%);
+  border-radius: 20%;
+  padding-left: 7px;
+  padding-right: 7px;
+  
+}
+
+.price h3{
+  font-size: 25px;
+  font-weight: 700;
+}
+
+h4{
+  font-size: 15px;
+  color: lightgray;
+  text-decoration: line-through;
+}
+
+.qty{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.qtybox::-webkit-outer-spin-button, .qtybox::-webkit-inner-spin-button{
+  appearance: none;
+  margin : 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.qtybox{
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: hsl(223, 64%, 98%);
+  text-align: center;
+  appearance: textfield;
+  display: inline-block;
+  font-family: "Kumbh Sans";
+  font-size: 15px;
+  font-weight: 700;  
+}
+
+.changeqtyright, .changeqtyleft{
+  border: none;
+  background-color: hsl(223, 64%, 98%);
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  color: orange;
+  font-weight: 700;
+  font-family: "Kumbh Sans";
+  font-size: 25px;     
+}
+
+.changeqtyleft{
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;   
+}
+
+.changeqtyright{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.add{
+  align-items: center;
+}
+
+.add span{
+padding-left: 10px;
+}
+
+/* add-to-cart button */
+.addcart{
+  background-color: darkorange;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  /* width:210%; */
+  height: 50px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Kumbh Sans";
+  letter-spacing: 0.5px;
+  align-items: center;
+  line-height: 2;
+  box-shadow: 0px 15px 20px -7px hsl(26, 93%, 78%);
+}
+
+.carticon{
+  width: 15px;
+  filter: brightness(0) invert(1);
+}
+
+.cartEmpty{
+  text-align: center;
+  margin-top:65px;
+  color:grey;
+  font-weight: 600;
+}
+
+.cartText{
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;    
+}
+
+.cartText p{
+color: black;
+font-weight: 600;
+}
+
+hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0.2em 0;
+  padding: 0;
+}
+
+.badge {
+  padding-left: 7px;
+  padding-right: 7px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  background-color:darkorange;
+  color: white;
+  font-size: 8px;
+  font-weight: 700;
+  font-family: "Kumbh Sans";
+  vertical-align: top;
+  margin-left: -10px;
+}
+  
+
+
+@media screen and (min-width:768px){
+
+body{
+  height: 100vh;
+  width: 100vw;
+  }
+
+
+.mainContainer{
+  display: flex;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  max-width: 100%;
+  flex-direction: row;
+}
+
+.menuleft a:hover{
+    color:black;
+    border-bottom: 4px solid darkorange;
+}
+
+.menuright{
+    padding-left: 30px;
+   
+}
+
+.menu1, .menu2{
+  padding-bottom: 25px;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  padding-left: 0px; 
+  width:100%;
+  padding-right: 0px; 
+  padding-top: 10px;
+  position:relative;
+}
+
+#logo{
+    padding-right: 50px;
+}
+
+#cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.btn-icon:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#cart:hover{
+    opacity: 10.0;
+}
+
+/* container left side */
+.conLeft{
+    display: flex;
+    flex-direction: column;
+    width:43%;
+    align-items: center;
+}
+
+.smallPics{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.mainPic{
+    border-radius: 5%;
+}
+
+.smallPics div{
+    padding-top: 5%;
+}
+
+/* container right side */
+.conRight{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    padding-left: 10%;
+}
+
+.con4{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.con5{
+  padding-bottom:6%;
+}
+
+.con6{
+    display: flex;
+    flex-direction: row;
+}
+
+.discount{
+    padding-left: 5%; 
+    padding-top: 7px;
+}
+
+.qty{
+  padding-right: 15px;
+}
+
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + div img {
+  opacity: 0.5;
+}
+.smallPics label div{
+  border: 2.5px solid white;
+  border-radius: 11px;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+[type=radio]:checked + div {
+  border: 2.5px solid darkorange;
+}
+
+[type=radio]:hover + img{
+    opacity: 0.5;
+}
+
+#img2,#img3{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 32px;
+}
+
+#img1{
+    padding-right: 16px;
+    padding-top: 32px;
+}
+
+#img4{
+    padding-left: 16px;
+    padding-top: 32px;
+}
+
+.smallPics label img{
+    border-radius:10%;
+    width:100%;
+}
+
+.addcart{
+  width:210%;
+}
+
+
+  /* flexbox of items and remove button */
+  .insideCart{
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #cart-items{
+    height: 180px;
+  }
+
+  /* flexbox of item details */
+  .cartDetails{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .detailText{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 18px;
+  }
+
+  .detailText p{
+    font-family: "Kumbh Sans";
+    font-size: 15px;
+    line-height: 0.5;
+    letter-spacing: 0;
+    color: darkgray;
+  }
+
+  .cartItemImg{
+    width: 50px;
+    border-radius: 5px;
+  }
+
+  /* trash can button */
+  .removeButton{
+    background-color: transparent;
+    border: none;
+    padding-top: 10px;
+  }
+
+  /* check-out button */
+  .coButton{
+    background-color: darkorange;
+    color:white;
+    font-size: 16px;
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+    width: 310px;
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  #sidebar{
+    display: none;
+  }
+
+  .hideMenuButton{
+    display:none;
+  }
+
+}
+
+.modal2 {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color:rgba(1, 1, 1, 0.7);
+ 
+} 
+
+/* Modal Content */
+.modal-content2 {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 35%;
+  padding-top: 10%;
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img{
+  border-radius: 5%;
+  width:100%
+}
+
+/* The Close Button */
+.close {
+  padding-top: 17%;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close img{
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.close:hover,
+.close:focus {
+color: #999;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next{
+  cursor: pointer;
+  position: absolute;
+  top: 47%;
+  width: auto;
+  padding-top:16px;
+  padding-bottom: 16px;
+  padding-right:20px;
+  padding-left:20px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.6s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev{
+  left: -25px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -25px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+img.demo {
+  display: block;
+  width: 18%;
+  border-radius: 20%;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: 1px solid black;
+ 
+}
+
+.demo:hover{
+  opacity: 0.3;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+/* Create four equal columns that floats next to eachother */
+.overlaypics{
+  display: flex;
+  flex-direction: row;
+  padding-top: 35px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.modal-backdrop {
+  opacity: 0 !important;
+}
+
+.modal-content{
+border:0px;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 50px; 
+  right: 100px; 
+  z-index: 10040;
+  overflow: auto;
+  overflow-y: auto;
+  width: 360px;
+  font-family: "Kumbh Sans";
+  box-shadow: 0px 15px 20px rgb(192,192,192);
+  border-radius:15px;
+}
+
+.mainPrev, .mainNext{
+  display: none;
+}
+
+
+@media screen and (max-width:767px){
+
+  .pagewrapper{ 
+    padding-top: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-bottom: 20%;
+  }
+
+  .menu1{
+    padding-left: 3%;
+    border-bottom: 0px;
+  }
+
+  .menu2{
+    padding-right: 7%;
+    border-bottom: 0px;
+  }
+
+  .mainContainer{
+    display: flex;
+    padding-top: 0%;
+    margin-top: -9%;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 0%;
+    padding-right: 0%;
+
+  }
+
+  #hideItem{
+    display: none;
+  }
+
+  .hideMenuButton{
+    display: flex;
+  }
+
+  #sidebar{
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: white;
+    padding-left: 7%;
+    padding-right: 20%;
+    height: 100%; 
+  }
+
+  #sidebar li{
+    padding-top: 15px;
+  }
+
+  #sidebar li a{
+    color: hsl(219, 9%, 45%);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+   
+  }
+
+  #sidebar-bg{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 5000;
+   
+  }
+
+  .navwrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .smallPics{
+    display: none;
+  }
+
+  #close-sidebar{
+    padding-left: 0%;
+    padding-bottom: 20px;
+  }
+
+  /* .mySlides{
+    display: block;
+  } */
+  .conLeft{
+    padding-top: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 100%;
+    margin-top: 0%;
+  }
+
+  .conRight{
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+  }
+
+  .bigPic{
+    padding-top: 0%;
+    margin-top: 0%;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  h2{
+    font-size: 35px;
+  }
+
+  .con3{
+    font-size: 18px;
+  }
+
+  .price-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .con4{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .discount{
+    padding-left: 10%; 
+    padding-top: 3px;
+  }
+
+  .con6{
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .addcart{
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .add{
+    padding-top: 3%;
+    width:100%;
+  }
+
+  .changeqtyleft{
+    width: 50%;
+  }
+
+  .changeqtyright{
+    width: 50%;
+  }
+
+  .qtybox{
+    width: 100%;
+  }
+
+  .modal-content2{
+    display: none;
+  }
+
+  .modal2{
+    display: none;
+    background :none;
+  }
+
+  .mainPrev,
+.mainNext{
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 330px;
+  /* top: 47%; */
+  width: auto;
+  padding-top:16px;
+  padding-bottom: 16px;
+  padding-right:20px;
+  padding-left:20px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.6s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.mainPrev{
+  left: 20px;
+} 
+
+/* Position the "next button" to the right */
+.mainNext {
+  right: 20px;
+}  
+
+#cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.modal-dialog{
+  position:absolute;
+  top:110px;
+  left:-17px;
+  right: 0;
+  width: 95%;
+  height: 300px;
+  margin: auto;
+}
+
+.modal-content{
+  height: 100%;
+}
+
+.cartEmpty{
+  margin-top: 100px;
+}
+
+.insideCart{
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#cart-items{
+  height: 180px;
+}
+
+.cart-item{
+  padding-top: 20px;
+}
+/* flexbox of item details */
+.cartDetails{
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+}
+
+.detailText{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 18px;
+}
+
+.detailText p{
+  font-family: "Kumbh Sans";
+  font-size: 15px;
+  line-height: 0.5;
+  letter-spacing: 0;
+  color: darkgray;
+}
+
+.cartItemImg{
+  width: 50px;
+  border-radius: 5px;
+}
+
+/* trash can button */
+.removeButton{
+  background-color: transparent;
+  border: none;
+  padding-top: 10px;
+  padding-left: 100px;
+}
+
+/* check-out button */
+.coButton{
+  background-color: darkorange;
+  color:white;
+  font-size: 16px;
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+  /* width: 310px; */
+  width: 400px;
+  height: 55px;
+  border-radius: 10px;
+  border: none;
+}
+
+}
